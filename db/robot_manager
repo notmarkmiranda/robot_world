@@ -1,0 +1,19 @@
+---
+robots:
+- id: 1
+  name: Mark
+  city: Denver
+  state: CO
+  avatar: https://robohash.org/Mark
+  birthdate: '1981-12-06'
+  date_hired: '2016-02-01'
+  department: Student
+- id: 2
+  name: Holly
+  city: Rawlins
+  state: WY
+  avatar: https://robohash.org/Holly
+  birthdate: '1980-07-14'
+  date_hired: '2013-07-21'
+  department: Maintenance of Flowers
+total: 3

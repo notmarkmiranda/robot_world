@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-3">
+    <img src="<%= @robot.avatar %>" align="left" />
+  
+
+    <table class="table table-hover">
+      <tr>
+        <th scope="row">Name</th>
+        <td><%=  @robot.name %></td>
+      </tr>
+      <tr>
+        <th scope="row">City, State</th>
+        <td><%=  @robot.city %>, <%=  @robot.state %></td>
+      </tr>
+      <tr>
+        <th scope="row">Birthdate</th>
+        <td><%=  @robot.birthdate %></td>
+      </tr>
+      <tr>
+        <th scope="row">Date Hired</th>
+        <td><%=  @robot.date_hired %></td>
+      </tr>
+      <tr>
+        <th scope="row">Department</th>
+        <td><%=  @robot.department %></td>
+      </tr>
+    </table>
+  </div>
+</div>
