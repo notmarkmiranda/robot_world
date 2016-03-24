@@ -1,5 +1,6 @@
 require 'yaml/store'
 require_relative 'robot'
+require 'pry'
 
 class RobotManager
     attr_reader :database

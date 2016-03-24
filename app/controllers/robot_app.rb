@@ -8,17 +8,6 @@ class RobotApp < Sinatra::Base
     erb :dashboard
   end
 
-  get '/robots/new' do
-    erb :new
-  end
-
-
-  get '/robots/:id' do |id|
-    @robot = robot_manager.find(id.to_i)
-    erb :show
-  end
-
-
   post '/robots' do
     robot_manager.create(params[:robot])
     redirect '/robots'
@@ -39,9 +28,18 @@ class RobotApp < Sinatra::Base
     redirect '/robots'
   end
 
+  get '/robots/new' do
+    erb :new
+  end
+
   get '/robots' do
     @robots = robot_manager.all
     erb :index
+  end
+
+  get '/robots/:id' do |id|
+    @robot = robot_manager.find(id.to_i)
+    erb :show
   end
 
   def robot_manager
