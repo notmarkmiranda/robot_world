@@ -1,14 +1,13 @@
 <h1>Robot World is the best place you've ever been in your entire life!</h1>
 <h2>Dashboard</h2>
 
-<p>
-  Average Robot Age: <%= robot_manager.average_age %>
-</p>
-
-<p>
-  Robots hired per year:
-</p>
-
-<p>
-  Breakdown by City/State/Department:
-</p>
+<ul>
+  <li>Average Robot Age: <b><%= robot_manager.average_age %></b></li>
+  <li>Robots hired per year:</li>
+    <ul>
+      <% robot_manager.hired_per_year.each do |k, v| %>
+        <li><b><%= k  %></b>: <%= v %></li>
+      <% end %>
+    </ul>
+  <li>Breakdown by City/State/Department:</li>
+</ul>

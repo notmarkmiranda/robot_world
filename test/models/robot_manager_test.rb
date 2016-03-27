@@ -109,4 +109,21 @@ class RobotManagerTest < Minitest::Test
     assert_operator 34.29, :>=, robot_manager.average_age
   end
 
+  def test_it_can_count_hired_per_year
+    create_robots(2)
+    robot_manager.create({
+      :name       => "John2",
+      :city       => "Denver2",
+      :state      => "CO2",
+      :avatar     => "http://www.robohash.org/John2",
+      :birthdate  => "12/06/1982",
+      :date_hired => "02/01/2015",
+      :department => "HR2",
+      })
+
+      assert_equal Hash, robot_manager.hired_per_year.class
+      assert_equal 2, robot_manager.hired_per_year[2016]
+      assert_equal 1, robot_manager.hired_per_year[2015]
+  end
+
 end

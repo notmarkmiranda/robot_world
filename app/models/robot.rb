@@ -24,7 +24,7 @@ class Robot
 
   def age
     difference = Date.today - @birthdate
-    (difference.to_f/365.25).round(2)
+    (difference.to_f/365.25).round
   end
 
 end

@@ -25,13 +25,14 @@ module TestHelpers
 
   def create_robots(number)
     number.times do |num|
-      Robot.new({ :name       => "Robot #{num}",
-                  :city       => "Denver #{num}",
-                  :state      => "CO #{num}",
-                  :avatar     => "http://www.robohash.org/Robot#{num}",
-                  :birthdate  => "12/06/1981",
-                  :date_hired => "02/01/2016",
-                  :department => "HR#{num}"})
+      robot_manager.create({
+        :name       => "Robot #{num}",
+        :city       => "Denver #{num}",
+        :state      => "CO #{num}",
+        :avatar     => "http://www.robohash.org/Robot#{num}",
+        :birthdate  => "12/06/1981",
+        :date_hired => "02/01/2016",
+        :department => "HR#{num}"})
     end
   end
 

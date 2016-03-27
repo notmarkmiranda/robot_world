@@ -38,8 +38,16 @@ class RobotManager
     else
       all.reduce(0) do |sum, robot|
         sum += robot.age
-      end / all.size if all.size > 0
+      end / all.size
     end
+  end
+
+  def hired_per_year
+    @hired_per_year = Hash.new(0)
+    all.each do |robot|
+      @hired_per_year[robot.date_hired.year] += 1
+    end
+    @hired_per_year
   end
 
 end
