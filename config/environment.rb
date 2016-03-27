@@ -10,8 +10,8 @@ Dir.glob(File.join(APP_ROOT, 'app', 'controllers', '*.rb')).each { |file| requir
 # require the model(s)
 Dir.glob(File.join(APP_ROOT, 'app', 'models', '*.rb')).each { |file| require file }
 
-# configure TaskManagerApp settings
-class TaskManagerApp < Sinatra::Base
+# configure RobotManagerApp settings
+class RobotManagerApp < Sinatra::Base
   set :method_override, true
   set :root, APP_ROOT
   set :views, File.join(APP_ROOT, "app", "views")

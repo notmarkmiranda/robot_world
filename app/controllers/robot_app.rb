@@ -1,5 +1,3 @@
-require 'models/robot_manager'
-
 class RobotApp < Sinatra::Base
   set :root, File.expand_path("..", __dir__)
   set :method_override, true
@@ -43,7 +41,11 @@ class RobotApp < Sinatra::Base
   end
 
   def robot_manager
-    database = YAML::Store.new('db/robot_manager')
+    if ENV["RACK_ENV"] == "test"
+      database = Sequel.sqlite('db/robot_manager_test.sqlite')
+    else
+      database = Sequel.sqlite('db/robot_manager_development.sqlite')
+    end
     @robot_manager ||= RobotManager.new(database)
   end
 
