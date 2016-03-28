@@ -6,8 +6,8 @@ class UserCanCreateRobot < Minitest::Test
 
   def test_user_can_create_robot
     visit '/'
+    
     first(:link, "Create Robot").click
-
     fill_in("robot[name]", with: "Mark")
     fill_in("robot[city]", with: "Denver")
     fill_in("robot[state]", with: "CO")
