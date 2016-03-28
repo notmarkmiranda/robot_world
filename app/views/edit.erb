@@ -1,12 +1,34 @@
-<form action="/robots/<%= @robot.id %>" method="post">
-  <p>Edit:</p>
-  <input type="hidden" name="_method" value="put">
-  <input class="form-control" type="text" name="robot[name]" value="<%= @robot.name %>"><br />
-  <input class="form-control" type="text" name="robot[city]" value="<%= @robot.city %>"><br />
-  <input class="form-control" type="text" name="robot[state]" value="<%= @robot.state %>"><br />
-  <input class="form-control" type="text" name="robot[avatar]" value="<%= @robot.avatar %>"><br />
-  <input class="form-control" type="date" name="robot[birthdate]" value="<%= @robot.birthdate %>"><br />
-  <input class="form-control" type="date" name="robot[date_hired]" value="<%= @robot.date_hired %>"><br />
-  <input class="form-control" type="text" name="robot[department]" value="<%= @robot.department %>"><br />
-  <input class="btn btn-primary" type="submit" value="go!">
-</form>
+<div class="content-section-b">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1  col-sm-12">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Edit <%= @robot.name %></h2>
+                <p class="lead">
+                  <form action="/robots/<%= @robot.id %>" method="post">
+                    <p>Edit:</p>
+                    <input type="hidden" name="_method" value="put">
+                    <input class="form-control" type="text" name="robot[name]" value="<%= @robot.name %>"><br />
+                    <input class="form-control" type="text" name="robot[city]" value="<%= @robot.city %>"><br />
+                    <input class="form-control" type="text" name="robot[state]" value="<%= @robot.state %>"><br />
+                    <input class="form-control" type="text" name="robot[avatar]" value="<%= @robot.avatar %>"><br />
+                    <input class="form-control" type="date" name="robot[birthdate]" value="<%= @robot.birthdate %>"><br />
+                    <input class="form-control" type="date" name="robot[date_hired]" value="<%= @robot.date_hired %>"><br />
+                    <input class="form-control" type="text" name="robot[department]" value="<%= @robot.department %>"><br />
+                    <input class="btn btn-default btn-lg network-name" type="submit" value="go!">
+                  </form>
+                </p>
+            </div>
+            <!-- <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                <img class="img-responsive" src="/img/cyborg.jpg" alt="">
+            </div> -->
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.content-section-b -->

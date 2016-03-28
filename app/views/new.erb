@@ -1,25 +1,46 @@
-<form action="/robots" method="post">
-  <h3>Let's create a new robot!</h3>
-  <label>Robot Name:</label>
-  <input type="text" class="form-control" placeholder="Name" name="robot[name]" /><br />
+<div class="content-section-b">
 
-  <label>Robot City:</label>
-  <input type="text" class="form-control" placeholder="City" name="robot[city]" /><br />
+    <div class="container">
 
-  <label>Robot State:</label>
-  <input type="text" class="form-control" placeholder="State" name="robot[state]" /><br />
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1  col-sm-12">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Let's create a new robot!</h2>
+                <p class="lead">
+                  <form action="/robots" method="post">
+                    <label>Robot Name:</label>
+                    <input class="form-control" type="text" placeholder="Name" name="robot[name]" /><br />
 
-  <label>Robot Avatar:</label>
-  <input type="text" class="form-control" placeholder="Avatar Address" name="robot[avatar]" /><br />
+                    <label>Robot City:</label>
+                    <input class="form-control" type="text" placeholder="City" name="robot[city]" /><br />
 
-  <label>Robot Birthdate:</label>
-  <input type="date" class="form-control" placeholder="Birthdate" name="robot[birthdate]" /><br />
+                    <label>Robot State:</label>
+                    <input class="form-control" type="text" placeholder="State" name="robot[state]" /><br />
 
-  <label>Robot Date Hired:</label>
-  <input type="date" class="form-control" placeholder="Date Hired" name="robot[date_hired]" /><br />
+                    <label>Robot Avatar:</label>
+                    <input class="form-control" type="text" placeholder="Avatar Address" name="robot[avatar]" /><br />
 
-  <label>Robot Department:</label>
-  <input type="department" class="form-control" placeholder="Department" name="robot[department]" /><br />
+                    <label>Robot Birthdate:</label>
+                    <input class="form-control" type="date" placeholder="Birthdate" name="robot[birthdate]" /><br />
 
-  <input class="btn btn-primary" type="submit" value="submit!" />
-</form>
+                    <label>Robot Date Hired:</label>
+                    <input class="form-control" type="date" placeholder="Date Hired" name="robot[date_hired]" /><br />
+
+                    <label>Robot Department:</label>
+                    <input class="form-control" type="department" placeholder="Department" name="robot[department]" /><br />
+
+                    <input class="btn btn-default btn-lg network-name" type="submit" value="submit!" />
+                  </form>
+                </p>
+            </div>
+            <!-- <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                <img class="img-responsive" src="/img/cyborg.jpg" alt="">
+            </div> -->
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.content-section-b -->

@@ -1,13 +1,113 @@
-<h1>Robot World is the best place you've ever been in your entire life!</h1>
-<h2>Dashboard</h2>
 
-<ul>
-  <li>Average Robot Age: <b><%= robot_manager.average_age %></b></li>
-  <li>Robots hired per year:</li>
-    <ul>
-      <% robot_manager.hired_per_year.each do |k, v| %>
-        <li><b><%= k  %></b>: <%= v %></li>
-      <% end %>
-    </ul>
-  <li>Breakdown by City/State/Department:</li>
-</ul>
+<a  name="services"></a>
+  <div class="content-section-a">
+
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-5 col-sm-6">
+                  <hr class="section-heading-spacer">
+                  <div class="clearfix"></div>
+                  <h2 class="section-heading">This is the Robot Dashboard!</h2>
+                  <p class="lead">Here you'll find all kinds of stats on the robot population here at Robot World! If you want other stats, please submit a <a href="#">ticket</a> and we'll try to get it implemented in a timely manner!</p>
+              </div>
+              <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                  <img class="img-responsive" src="img/ipad.png" alt="">
+              </div>
+          </div>
+
+      </div>
+      <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Average Age of our Robots:<br /><%= robot_manager.average_age %></h2>
+                    <p class="lead">We shoot for the best quality robots here at robot world, combining experience with youthful processing power!</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="img/cyborg.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Robots Hired Per Year:</h2>
+                    <!-- <p class="lead"> -->
+                      <ul class="lead">
+                        <% robot_manager.hired_per_year.each do |k, v| %>
+                        <li><b><%= k  %></b>: <%= v %></li>
+                        <% end %>
+                      </ul>
+                    <!-- </p> -->
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/cy.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Breakdown by City, State, Department:</h2>
+                    <p class="lead">
+                      <ul class="lead">
+                        <li><h3>City</h3></li>
+                        <ul class="lead">
+                          <% robot_manager.by_city.each do |k, v| %>
+                          <li><b><%= k  %></b>: <%= v %></li>
+                          <% end %>
+                        </ul>
+                        <li><h3>State</h3></li>
+                        <ul class="lead">
+                          <% robot_manager.by_state.each do |k, v| %>
+                          <li><b><%= k  %></b>: <%= v %></li>
+                          <% end %>
+                        </ul>
+                        <li><h3>Department</h3></li>
+                        <ul class="lead">
+                          <% robot_manager.by_department.each do |k, v| %>
+                          <li><b><%= k  %></b>: <%= v %></li>
+                          <% end %>
+                        </ul>
+                      </ul>
+                    </p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="img/robot-army1.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->

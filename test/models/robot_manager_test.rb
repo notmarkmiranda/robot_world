@@ -126,4 +126,26 @@ class RobotManagerTest < Minitest::Test
       assert_equal 1, robot_manager.hired_per_year[2015]
   end
 
+  def test_can_separate_robots_by_department
+    create_robots(4)
+
+    assert_equal Hash, robot_manager.by_department.class
+    assert_equal 1, robot_manager.by_department["HR0"]
+    assert_equal 1, robot_manager.by_department["HR1"]
+    assert_equal 1, robot_manager.by_department["HR2"]
+    assert_equal 1, robot_manager.by_department["HR3"]
+    refute_equal 2, robot_manager.by_department["HR0"]
+  end
+
+  def test_can_separate_robots_by_city
+    create_robots(4)
+
+    assert_equal Hash, robot_manager.by_city.class
+    assert_equal 1, robot_manager.by_city["Denver 0"]
+    assert_equal 1, robot_manager.by_city["Denver 1"]
+    assert_equal 1, robot_manager.by_city["Denver 2"]
+    assert_equal 1, robot_manager.by_city["Denver 3"]
+    refute_equal 2, robot_manager.by_city["Denver 0"]
+  end
+
 end

@@ -1,9 +1,32 @@
-<h1>All Robots</h1>
-<% @robots.each do |robot| %>
-  <h3 class="robot"><%= robot.id %>: <a href="/robots/<%= robot.id %>"><%= robot.name %></a><br />
-    <a class="btn btn-danger" href="/robots/<%= robot.id  %>/edit">Edit</a></h3>
-    <form action="/robots/<%= robot.id %>" method="post">
-      <input type="hidden" name="_method" value="delete">
-      <input class="btn btn-danger" type="submit" value="delete">
-    </form><hr>
-<% end %>
+<a  name="services"></a>
+  <div class="content-section-a">
+
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-5 col-sm-6">
+                  <hr class="section-heading-spacer">
+                  <div class="clearfix"></div>
+                  <h2 class="section-heading">Here are all of the robots!</h2>
+                  <% @robots.each do |robot| %>
+                  <p class="lead">
+                    <h3><a href="/robots/<%= robot.id %>"><%= robot.name %></a></h3>
+                      <p class="lead"><%= robot.age %> years old.<br /> Works in the <%= robot.department %> department.</p>
+
+                      <a href="/robots/<%= robot.id  %>/edit" class="btn btn-default btn-lg"><span class="network-name">Edit</span></a>
+                      <form action="/robots/<%= robot.id %>" method="post">
+                        <input type="hidden" name="_method" value="delete">
+                        <input type="submit" value="delete" class="btn btn-default btn-lg network-name">
+                      </form><hr>
+                  </p>
+                  <% end %>
+              </div>
+              <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                  <img class="img-responsive" src="img/newrobots.jpg" alt="">
+              </div>
+          </div>
+
+      </div>
+      <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->

@@ -43,11 +43,35 @@ class RobotManager
   end
 
   def hired_per_year
-    @hired_per_year = Hash.new(0)
+    hired_per_year = Hash.new(0)
     all.each do |robot|
-      @hired_per_year[robot.date_hired.year] += 1
+      hired_per_year[robot.date_hired.year] += 1
     end
-    @hired_per_year
+    hired_per_year
+  end
+
+  def by_department
+    by_department = Hash.new(0)
+    all.each do |robot|
+      by_department[robot.department] += 1
+    end
+    by_department
+  end
+
+  def by_city
+    by_city = Hash.new(0)
+    all.each do |robot|
+      by_city[robot.city] += 1
+    end
+    by_city
+  end
+
+  def by_state
+    by_state = Hash.new(0)
+    all.each do |robot|
+      by_state[robot.state] += 1
+    end
+    by_state
   end
 
 end
