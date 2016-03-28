@@ -19,7 +19,7 @@ class RobotTest < Minitest::Test
     assert_equal "02/01/2016", robot.date_hired.strftime("%m/%d/%Y")
     assert_equal "HR", robot.department
 
-    assert_equal Float, robot.age.class
+    assert_equal Fixnum, robot.age.class
   end
 
 end

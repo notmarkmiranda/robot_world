@@ -6,7 +6,7 @@ class UserCanDeleteRobot < Minitest::Test
 
   def test_user_can_delete_robot
     visit '/'
-    click_link("Create a Robot")
+    first(:link, "Create Robot").click
 
     fill_in("robot[name]", with: "Mark")
     fill_in("robot[city]", with: "Denver")

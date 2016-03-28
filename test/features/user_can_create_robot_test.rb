@@ -6,7 +6,7 @@ class UserCanCreateRobot < Minitest::Test
 
   def test_user_can_create_robot
     visit '/'
-    click_link("Create a Robot")
+    first(:link, "Create Robot").click
 
     fill_in("robot[name]", with: "Mark")
     fill_in("robot[city]", with: "Denver")
@@ -18,8 +18,7 @@ class UserCanCreateRobot < Minitest::Test
     click_button("submit!")
 
     assert_equal "/robots", current_path
-
-    within (".robot") do
+    within ("h3 a") do
       assert page.has_content?("Mark")
     end
   end
