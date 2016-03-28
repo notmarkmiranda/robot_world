@@ -12,8 +12,8 @@
                     <h3><a href="/robots/<%= robot.id %>"><%= robot.name %></a></h3>
                       <p class="lead"><%= robot.age %> years old.<br /> Works in the <%= robot.department %> department.</p>
 
-                      <a href="/robots/<%= robot.id  %>/edit" class="btn btn-default btn-lg"><span class="network-name">Edit</span></a>
-                      <form action="/robots/<%= robot.id %>" method="post">
+                      <a href="/robots/<%= robot.id  %>/edit" class="btn btn-default btn-lg network-name">Edit</a>
+                      <form class="weiners" action="/robots/<%= robot.id %>" method="post">
                         <input type="hidden" name="_method" value="delete">
                         <input type="submit" value="delete" class="btn btn-default btn-lg network-name">
                       </form><hr>
