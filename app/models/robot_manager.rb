@@ -36,6 +36,8 @@ class RobotManager
     if all.size == 0
       0
     else
+      database.from(:robots).to_a.map { |robot| Robot.new(robot) }
+
       all.reduce(0) do |sum, robot|
         sum += robot.age
       end / all.size
