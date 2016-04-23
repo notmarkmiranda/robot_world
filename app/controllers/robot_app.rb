@@ -3,6 +3,7 @@ class RobotApp < Sinatra::Base
   set :method_override, true
 
   get '/' do
+    #i dont remember how to do this
     erb :dashboard
   end
 
